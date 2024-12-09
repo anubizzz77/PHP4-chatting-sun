@@ -26,10 +26,10 @@ if (isset($_SESSION['username'])) {
     
     # if the message inserted
     if ($res) {
-    	/**
-       check if this is the first
-       conversation between them
-       **/
+    	
+       /**check if this is the first
+       conversation between them**/
+       
        $sql2 = "SELECT * FROM conversations
                WHERE (user_1=? AND user_2=?)
                OR    (user_2=? AND user_1=?)";

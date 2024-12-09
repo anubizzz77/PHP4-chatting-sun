@@ -1,10 +1,10 @@
 <?php 
 
 function getConversation($user_id, $conn){
-    /**
-      Getting all the conversations 
-      for current (logged in) user
-    **/
+    
+      /**Getting all the conversations 
+      for current (logged in) user**/
+    
     $sql = "SELECT * FROM conversations
             WHERE user_1=? OR user_2=?
             ORDER BY conversation_id DESC";
@@ -15,10 +15,10 @@ function getConversation($user_id, $conn){
     if($stmt->rowCount() > 0){
         $conversations = $stmt->fetchAll();
 
-        /**
-          creating empty array to 
-          store the user conversation
-        **/
+        
+          /**creating empty array to 
+          store the user conversation**/
+        
         $user_data = [];
         
         # looping through the conversations
